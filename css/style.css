@@ -112,7 +112,9 @@ body {
   width: 1200px;
   height: 220px;
   margin: 0 auto;
-  margin-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-sizing:border-box;
 }
 #content div{
   margin-right: 20px;
@@ -122,9 +124,10 @@ body {
   margin-right: 0;
 }
 #content h3{
-  font-size: 22px;
+  font-size: 20px;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom:7px;
+  color: #7b422e;
 }
 .news {
   width: 386px; height: 220px;
@@ -132,7 +135,7 @@ body {
   float: left;
 }
 .news li {
-  padding-bottom: 9px;
+  padding-bottom: 7px;
 }
 .news p {
   margin-top: 10px;
@@ -140,19 +143,18 @@ body {
   text-align: right;
 }
 .news li > .date {
-  padding-left: 20px;
   color: #999;
   float: right;
 }
 .gallery {
   position: relative;
-  width: 386px; height: 220px;
+  width: 386px; height: 140px;
   float: left;
 }
-.sub_banner > img {
+.sub_banner{
   position: relative;
   width: 386px;
-  height: 220px;
+  height: 120px;
   float: right;
 }
 #content div:last-child {
@@ -201,7 +203,6 @@ body {
   height: 100px;
   margin: 0 auto;
   background: #1e1e1e;
-  margin-top: 10px;
   box-sizing:border-box;
   position: relative;
 }
@@ -234,12 +235,11 @@ left: 200px;
 top: 70px;
 font-size: 12px;
 color: #777;
-
 }
 #main_footer> .familysite > h3 >a{
   float: right;
   margin-top: 10px;
   margin-right: 40px;
-  font-size: 16px;
+  font-size: 14px;
   color:#999;
 }
