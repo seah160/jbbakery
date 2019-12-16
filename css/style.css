@@ -1,0 +1,245 @@
+/* style.css */
+
+/* reset */
+* {
+  margin: 0; padding: 0;
+}
+ul { list-style-type: none;}
+a { 
+  text-decoration: none;
+  color: #333333;
+}
+/* 공통 스타일 */
+.clear { clear: both;}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+/*
+  page 폭: 1200px
+  main color: #7b422e
+  sub color: #bb692d, #83d154
+*/
+
+/* 헤더 영역 */
+#main_header {
+  position: relative;
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  /*background: #ccc;*/
+}
+#main_header > h1 {
+  float: left;
+  margin-top: 30px;
+}
+
+/* 1단계 메뉴 */
+#main_gnb {
+  position: relative;
+  float: right;
+  margin-bottom: 0px;
+  /* margin-top: 30px; */
+}
+#main_gnb > .depth1 > li {
+  position: relative;
+  float: left;
+  margin-top: 64px;
+  /* outline: 1px solid green; */
+  border-bottom: 3px solid #fff; 
+  z-index: 99;
+  padding-bottom: 10px;
+  /* outline: 1px solid green; */
+}
+#main_gnb > .depth1 > li > a {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 150px;
+}
+/* 호버시 메뉴 언더라인 효과 */
+#main_gnb > .depth1 > li:hover {
+  border-bottom: 3px solid #7b422e;;
+}
+/* 2단계 메뉴 */
+#main_gnb .depth2.show {
+  padding-top: 10px;
+  height: 150px;
+  /* overflow: hidden; */
+  /* outline: 1px solid green; */
+  background:  #fff;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #ccc;
+}
+#main_gnb .depth2 {
+  position: absolute;
+  transition-duration: 0.3s;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  top: 36px;
+}
+#main_gnb .depth2 li {
+  padding-top: 20px;
+  text-align: center;
+}
+#main_gnb .depth2 > a {
+  font-size: 12px;
+  display: block;
+}
+#main_gnb .depth2 li a:hover {
+  font-weight: bold;
+  color: #7b422e;
+}
+
+/* 메인 배너 */
+#main_banner {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#main_banner img {width: 100%;}
+
+/*content*/
+#content {
+  position: relative;
+  width: 1200px;
+  height: 220px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#content div{
+  margin-right: 20px;
+}
+
+#info div:last-child {
+  margin-right: 0;
+}
+#content h3{
+  font-size: 22px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.news {
+  width: 386px; height: 220px;
+  overflow: hidden;
+  float: left;
+}
+.news li {
+  padding-bottom: 9px;
+}
+.news p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: right;
+}
+.news li > .date {
+  padding-left: 20px;
+  color: #999;
+  float: right;
+}
+.gallery {
+  position: relative;
+  width: 386px; height: 220px;
+  float: left;
+}
+.sub_banner > img {
+  position: relative;
+  width: 386px;
+  height: 220px;
+  float: right;
+}
+#content div:last-child {
+  margin-right: 0;
+}
+/* 팝업창 */
+#main_popup {
+  position: absolute;
+  top: 200px; left: 45%;
+  z-index: 999;
+}
+.popup.show {
+  z-index: 999;
+  right: 20px; top: 50px;
+  width: 300px; height: 400px;
+  background: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+.popup {
+  display: none;
+}
+.popup > .more {
+  position: absolute;
+  font-size: 12px;
+  bottom: 40px; right: 30px;
+  display: block;
+  border-bottom: 1px solid #000;
+}
+.popup > .close_box {
+  position: absolute;
+  bottom: 0; left: 0;
+  background: #000;
+  width: 300px;
+  text-align: right;
+  padding: 3px 0;
+}
+.popup > .close_box > #btn_close {
+  /* border: 1px solid red; */
+  padding-right: 12px;
+  color: white;
+}
+/* 푸터 */
+#main_footer{
+  width: 1200px;
+  height: 180px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  margin-top: 10px;
+  box-sizing:border-box;
+  position: relative;
+}
+#main_footer >.footer_logo {
+  position: absolute;
+  left: 1px;
+  top: 40px;
+}
+.footer_menu {
+  position: absolute;
+  left: 200px;
+  top: 40px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.footer_menu > a {
+  color: #777;
+}
+#main_footer > address {
+  position: absolute;
+  font-style: normal;
+  left: 200px;
+  top: 70px;
+  font-size: 12px;
+  color: #777;
+}
+#main_footer>p {
+position: absolute;
+left: 200px;
+top: 120px;
+font-size: 12px;
+color: #777;
+
+}
+#main_footer> .familysite > h3 >a{
+  float: right;
+  margin-top: 80px;
+  margin-right: 40px;
+  font-size: 16px;
+  color:#999;
+}

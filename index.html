@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="정다운 베이커리">
+  <title>정다운 베이커리(JB 베이커리)</title>
+  <!-- 웹 폰트 -->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/slider.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- 제이쿼리 -->
+    <script src="./js/jquery-1.12.3.js"></script>
+   <!-- 사용자 자바스크립트 -->
+   <script src="./js/slider.js"></script>
+   <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <header id="main_header">
+    <h1>
+      <a href="index.html">
+        <img src="./images/jb_logo.png" alt="JB로고" width="200px" height="40px">
+      </a>
+    </h1>
+    <nav id="main_gnb">
+      <ul class="depth1">
+        <li><a href="#">JB 소개</a>
+          <ul class="depth2">
+            <li><a href="#">브랜드 스토리</a></li>
+            <li><a href="#">JB 가맹점</a></li>
+          </ul>
+        </li>
+        <li><a href="#">제품소개</a>
+          <ul class="depth2">
+              <li><a href="#">빵</a></li>
+              <li><a href="#">케이크</a></li>
+              <li><a href="#">음료</a></li>
+              <li><a href="#">선물</a></li>
+            </ul>
+        </li>
+        <li><a href="#">빵 만들기</a>
+          <ul class="depth2">
+              <li><a href="#">제빵 재료</a></li>
+              <li><a href="#">제빵 도구</a></li>
+              <li><a href="#">제빵 포장도구</a></li>
+            </ul>
+        </li>
+        <li><a href="#">커뮤니티</a>
+          <ul class="depth2 ">
+              <li><a href="#">나만의 레시피</a></li>
+              <li><a href="#">내가 만든 빵</a></li>
+              <li><a href="#">제빵 노하우</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="main_banner">
+    <div class="slider">
+      <img class="show" src="./images/image01.jpg" alt="배너1"  id="pic1">
+      <img src="./images/image02.jpg" alt="배너2" id="pic2">
+      <img src="./images/image03.jpg" alt="배너3" id="pic3">
+      <div class="indicator">
+        <a class="show" href="#" id="in01">1</a>
+        <a href="#" id="in02">2</a>
+        <a href="#" id="in03">3</a>
+      </div>
+    </div>
+  </section>
+<!--content-->
+  <section id="content">
+    <div class="news">
+      <h3>공지사항</h3>
+        <ul>
+          <li>
+            <a href="#">제1회 JB 베이커리 워크숍에 초대합니다(서울권).</a><span class="date">2019-12-12</span>
+          </li>
+          <li>
+            <a href="#">올림픽공원 카페 초보 여성 창업을 추천받습니다.</a><span class="date">2019.12.10</span>
+          </li>
+          <li>
+            <a href="#">온가족이 함께 즐기는 베이킹 체험 교실</a><span class="date">2019.12.05</span>
+          </li>
+        </ul>
+    </div>
+    <div class="gallery">
+      <h3>갤러리</h3>
+      <a href="#"><img src="./images/gallery01.jpg" alt="갤러리1"></a>
+      <a href="#"><img src="./images/gallery02.jpg" alt="갤러리2"></a>
+      <a href="#"><img src="./images/gallery03.jpg" alt="갤러리3"></a>
+    </div>
+    <div class="sub_banner">
+      <a href="#"><img src="./images/sub_banner.jpg" alt="서브베너"></a>
+    </div>
+  </section>
+
+  <section id="main_popup">
+      <div class="popup">
+        <img src="./images/popup.jpg" alt="팝업">
+        <a class="more" href="#">자세히 보기 > </a>
+        <div class="close_box">
+          <a href="#" id="btn_close">X</a>
+        </div>
+      </div>
+      <script>
+        $(function(){
+          // 팝업창 표시
+          $('.popup').addClass('show');
+    
+          // 닫기 버튼 클릭시 팝업창 종료
+          $('#btn_close').click(function(){
+            $('.popup').removeClass('show');
+          });
+        });
+      </script>
+  </section>
+  
+  <footer id="main_footer">
+    <div class="footer_logo"><img src="images/jb_footerlogo.png" alt="footer logo">
+    </div>
+    <div class="footer_menu">
+        <a href="#">법적고지   |   </a>
+        <a href="#"><strong>개인정보취급방침</strong>   |   </a>
+        <a href="#">개인정보처리방침</a>
+    </div>
+    <address>
+      상호명:(주)JB컴퍼니 | 대표자:윤정우 | 개인정보관리책임자:김선정<br>사업장주소:서울특별시 금천구 가산동 가산디지털2로 | 상담전화:1588-0789</address>
+    <p class="copyright">Copyright © 2018 Sajo All right reserved.</p>
+    <div class="familysite">
+      <h3><a href="#">패밀리사이트</h3>
+    </div>
+  </footer>
+</body>
+</html>
